@@ -1,0 +1,105 @@
+:root {
+    --light: #fff; 
+    --dark: #333333;
+}
+@font-face {
+    font-family: pop;
+    src: url('../fonts/Poppins.ttf');
+} 
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+.container {
+    position: relative;
+    width:100%;
+    height: 100vh;
+    overflow: hidden; 
+    object-fit: cover;
+}
+.sky {
+    position:absolute;
+    width: 1400px;
+    right: -30px;
+    top: 0;
+    z-index: 11; 
+}
+.mount1 {
+    position: absolute;
+    width: 1365px;
+    right: 0;
+    bottom: -190px;
+    z-index: 12;   
+}
+.mount2 {
+    position: absolute;
+    width: 1500px;
+    left: 0;
+    top: -45px;
+}
+.keyNav {
+    position: absolute;
+    z-index: 15;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.4em;
+    /* background: linear-gradient(rgba(54, 54, 54, 0.5), rgba(73, 73, 73, 0.5)) */
+
+}
+.mainNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+li {
+    list-style-type: none;
+
+}
+a {
+    text-decoration: none;
+    padding: 10px 30px;
+    color: var(--dark);
+    text-transform: uppercase;
+    transition: .5s ease-in;
+    font-size: .8em;
+    font-weight: bolder;
+    font-family: pop;
+    letter-spacing: 2px;
+}
+.header {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: var(--dark);
+    font-family: pop;
+    font-size: 1.1em;
+    font-weight: bolder;
+}
+.header span {
+    height: 30px;
+}
+.border {
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background-color: var(--dark);
+        bottom: 0;
+        left: 0;
+}
+.big-header {
+    position:absolute;
+    z-index: 30;
+    top: calc(80% - 2em);
+    width: 100%;
+    text-align: center;
+    font-size: 10em;
+    color: var(--light);
+    font-weight: bolder;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
