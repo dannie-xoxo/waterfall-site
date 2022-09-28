@@ -39,7 +39,7 @@ function Part2() {
                     Maiores rerum id iste aliquid? Praesentium,
                     impedit. Obcaecati ducimus numquam dolorem magnam ea iste error, 
                 neque vel, ut quaerat possimus voluptatem hic.<br/>
-                <button className="btn">Discover Destination</button></p>
+                <button className="btn">Discover Destination <span><BiRightArrowAlt/></span></button></p>
                 </figcaption>
                 </figure>
 
@@ -57,7 +57,7 @@ function Part2() {
                 omnis distinctio facilis illo a explicabo eos, ad, rem sequi eveniet consequuntur
                  necessitatibus similique quas sit vitae veniam. Molestias beatae aliquam nam eos nihil,
                  illo laudantium rem temporibus quis reiciendis tempore!<br/>
-                 <button className="btn">Discover Destination</button></p>
+                 <button className="btn">Discover Destination <span><BiRightArrowAlt/></span></button></p>
                 </figcaption>
                 </figure>
                 
@@ -74,7 +74,7 @@ function Part2() {
                     Maiores rerum id iste aliquid? Praesentium,
                     impedit. Obcaecati ducimus numquam dolorem magnam ea iste error, 
                 neque vel, ut quaerat possimus voluptatem hic.<br/>
-                <button className="btn">Discover Destination</button></p>
+                <button className="btn">Discover Destination <span><BiRightArrowAlt/></span></button></p>
                 </figcaption>
                 </figure>
 

@@ -103,8 +103,9 @@ figcaption {
     border: none;
     font-weight: bolder;
     margin-top: 30px ;
+    text-decoration: underline;
 }
- svg {
+ span svg {
     float: right;
-    margin-bottom: 50px;
+    bottom: 14px;
 }

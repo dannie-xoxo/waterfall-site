@@ -9,7 +9,7 @@ function Part1() {
         <>
          <div className='container'>
             <nav className='keyNav'>
-            <h1 className='header'> <span><BiPlanet /></span>Globe Express</h1>
+            <h1 className='header'> Globe Express</h1>
             <div className="border"></div>
                 <ul className= 'mainNav'>
                 <li className='navItem'><a className='active' href="#Home" >Home</a></li>
