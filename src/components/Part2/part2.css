@@ -22,16 +22,26 @@
     align-items: center;
     justify-content: center;
     flex:  1 50%;
-    transition: .4s ease-in;
+    transition: .5s ease-in;
+    overflow: hidden;
+   
+    
  }
 
-figure:hover {
-    transform: scale(1.1);
+.cont:hover .img {
+    transform: scale(1.2);
 }
+
+.cont-active:hover .img-active {
+    transform: none;
+}
+
  
  .img {
     width: 300px;
     height: 400px;
+    transition: .5s ease-out;
+    overflow: hidden;
  }
 
 .fig {
@@ -99,14 +109,35 @@ figure:hover {
 .fig-active {
     position: relative;
     float: right;
-    width: 100%;
-    height: 700px;
+    width: 30vw;
+    height: 100vh;
     background: var(--light);
     padding: 20px;
-    overflow: hidden;
+    
 }
 .img-active {
-    width: 800px;
-    height: 700px;
+    width: 70vw;
+    height: 100vh;
+    transition: .5s ease-out;
+    overflow: hidden;
 }
+
+.text-active {
+    margin-top: 20px;
+    font-family: pop;
+    font-size: .8em;
+    text-align:left;
+    font-weight: bolder;
+    opacity: 1;
+}
+.cont-active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex:  1 50%;
+    transition: .5s ease-in;
+    overflow: visible;
+   
+    
+ }
 
