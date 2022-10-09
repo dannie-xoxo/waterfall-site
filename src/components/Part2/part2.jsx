@@ -37,7 +37,7 @@ function Part2() {
         <div className="container2">
             <h1 className="head">Waterfall Trip Ideas</h1>
             <div className="img-cont">
-            <figure className={cont} id='angel'>
+            <figure className={cont} >
                 <img className= {expand} src ={angel} alt="" />
                 <figcaption className={ex}>
                 <h3 className="feat">Feautured Destination</h3>
@@ -91,7 +91,7 @@ function Part2() {
                  <img className={expand} id='niagra' src={niagra} alt='' />
                 <figcaption className={ex}>
                 <h3 className="feat">Feautured Destination</h3>
-                <h1 className="heading">Niagra Falls</h1>
+                <h1 className="heading">Niagara Falls</h1>
                 <div className="line"></div>
                 <p className={text}>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                  Aut temporibus, nisi assumenda quod libero incidunt?
