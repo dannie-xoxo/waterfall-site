@@ -186,12 +186,12 @@ function Part2() {
         <div className= {c}>
             <h1 className={head}>Waterfall Trip Destinations</h1>
             <div className={display1}>
-            <figure className= {cont}  ref= {inner} style={{opacity:offsetY /(line.top + offsetHeight)}}>
+            <figure className= {cont}>
                 <img className= {expand} src ={angel} alt="" />
                 <figcaption className={ex}>
                 <h3 className="feat">Feautured Destination</h3>
                 <h1 className="heading">Angel Falls</h1>
-                <div className="line" ref={inner} style ={{width:`${offsetY / (line.top + offsetHeight)* 7}%`}}></div>
+                <div className="line" ref={inner} style ={{width:`${offsetY / (line.top + offsetHeight)* 9}%`}}></div>
                   <p className={text}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
                 Magni iusto dolores maiores ipsa blanditiis quam deserunt voluptatum officia corporis, 
                 omnis distinctio facilis illo a explicabo eos, ad, rem sequi eveniet consequuntur
@@ -201,12 +201,12 @@ function Part2() {
                 </figcaption>
                 </figure>
                  
-                 <figure className={cont1} ref= {inner} style={{opacity:offsetY /(line.top + offsetHeight)}}>
+                 <figure className={cont1}>
                  <img className={expand1} src={jog} alt='' />
                 <figcaption className= {ex1}>
                 <h3 className="feat">Feautured Destination</h3>
                 <h1 className="heading">Jog Falls</h1>
-                <div className="line"ref={inner} style ={{width:`${offsetY / (line.top + offsetHeight)* 7}%`}}></div>
+                <div className="line"ref={inner} style ={{width:`${offsetY / (line.top + offsetHeight)* 9}%`}}></div>
                 <p className={text1}>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                  Aut temporibus, nisi assumenda quod libero incidunt?
                   Doloribus asperiores praesentium inventore, pariatur
@@ -221,12 +221,12 @@ function Part2() {
                 </div>
 
                 <div className={display}>
-            <figure className={cont2}  ref= {inner} style={{opacity:offsetY /(line.top + offsetHeight)}}>
+            <figure className={cont2}>
             <img  className={expand2} src={victoria} alt="" />
                 <figcaption className={ex2}>
                 <h3 className="feat">Feautured Destination</h3>
                 <h1 className="heading">Victoria Falls</h1>
-                <div className="line" ref={inner} style ={{width:`${offsetY / (line.top + offsetHeight)* 7}%`}}></div>
+                <div className="line" ref={inner} style ={{width:`${offsetY / (line.top + offsetHeight)* 9}%`}}></div>
                   <p className={text2}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
                 Magni iusto dolores maiores ipsa blanditiis quam deserunt voluptatum officia corporis, 
                 omnis distinctio facilis illo a explicabo eos, ad, rem sequi eveniet consequuntur
@@ -236,12 +236,12 @@ function Part2() {
                 </figcaption>
                 </figure>
                 
-                 <figure className={cont3} ref= {inner} style={{opacity:offsetY /(line.top + offsetHeight)}}>
+                 <figure className={cont3}>
                  <img className={expand3} id='niagra' src={niagra} alt='' />
                 <figcaption className={ex3}>
                 <h3 className="feat">Feautured Destination</h3>
                 <h1 className="heading">Niagara Falls</h1>
-                <div className="line" ref={inner} style ={{width:`${offsetY / (line.top + offsetHeight)* 7}%`}}></div>
+                <div className="line" ref={inner} style ={{width:`${offsetY / (line.top + offsetHeight)* 9}%`}}></div>
                 <p className={text3}>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                  Aut temporibus, nisi assumenda quod libero incidunt?
                   Doloribus asperiores praesentium inventore, pariatur
