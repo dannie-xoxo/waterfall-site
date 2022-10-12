@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import '../Part2/part2.css';
 import angel from '../images/angel.jpg'
 import jog from '../images/jog.jpg'
@@ -7,12 +7,35 @@ import niagra from '../images/niagra.jpg';
 import { BiRightArrowAlt } from 'react-icons/bi';
 function Part2() {
 
+  const inner= useRef()
+ 
+    const[offsetY, setOffsetY] = useState(0);
+    const[offsetHeight, setOffsetHeight] = useState(0);
+    const[line, setLine] =useState(0)
+    const handleScroll = () => {
+        setOffsetY(window.pageYOffset)
+        setOffsetHeight(inner.current.offsetHeight);
+        setLine(inner.current.getBoundingClientRect())
+
+    }
+        useEffect(() => {
+            window.addEventListener('scroll', handleScroll);
+            console.log(inner.current.getBoundingClientRect())
+            console.log(inner.current.offsetHeight)
+
+            return () => {
+                window.removeEventListener('scroll', handleScroll)
+            }
+        },[])
+
 
   const[expand, setExpand] = useState('img1');
   const[ex, setEx] = useState('fig1');
   const[text, setText]= useState('text')
   const[cont, setCont]= useState('cont1')
-  const[display, setDisplay] = useState('img-cont')
+  const[display, setDisplay] = useState('img-cont1')
+  const[c, setC] = useState('container2')
+  const[head, setHead] = useState('head')
 
   const toggleHandler = () => {
     expand === 'img1'
@@ -32,14 +55,23 @@ function Part2() {
    : setCont('cont1');
 
    display === 'img-cont1'
-   ? setDisplay('img cont1-active img-cont1')
-   : setDisplay('img-cont1')
+   ? setDisplay('img-cont1 img-cont1-active')
+   : setDisplay('img-cont1');
+
+   c === 'container2'
+   ? setC('container2 container2-active')
+   : setC('container2');
+
+   head === 'head'
+   ? setHead('head head-active')
+   : setHead('head')
 
   }
   const[expand1, setExpand1] = useState('img2');
   const[ex1, setEx1] = useState('fig2');
   const[text1, setText1]= useState('text')
   const[cont1, setCont1]= useState('cont2')
+  
   
 
   const toggleHandler2 = () => {
@@ -59,12 +91,25 @@ function Part2() {
    ? setCont1('cont2 cont-active')
    : setCont1('cont2');
 
+   display === 'img-cont1'
+   ? setDisplay('img-cont1 img-cont1-active')
+   : setDisplay('img-cont1')
+
+   c === 'container2'
+   ? setC('container2 container2-active')
+   : setC('container2')
+
+   head === 'head'
+   ? setHead('head head-active')
+   : setHead('head')
+
   }
   
   const[expand2, setExpand2] = useState('img3');
   const[ex2, setEx2] = useState('fig3');
   const[text2, setText2]= useState('text')
   const[cont2, setCont2]= useState('cont3')
+  const[display1, setDisplay1] = useState('img-cont')
   
 
   const toggleHandler3 = () => {
@@ -83,6 +128,18 @@ function Part2() {
    cont2 === 'cont3'
    ? setCont2('cont3 cont-active')
    : setCont2('cont3');
+
+   display1 === 'img-cont'
+   ? setDisplay1('img-cont img-cont-active')
+   : setDisplay1('img-cont');
+
+   c === 'container2'
+   ? setC('container2 container2-active')
+   : setC('container2')
+
+   head === 'head'
+   ? setHead('head head-active')
+   : setHead('head')
    
   }
   const[expand3, setExpand3] = useState('img4');
@@ -107,6 +164,18 @@ function Part2() {
    cont3 === 'cont4'
    ? setCont3('cont4 cont-active')
    : setCont3('cont4');
+
+   display1 === 'img-cont'
+   ? setDisplay1('img-cont img-cont-active')
+   : setDisplay1('img-cont');
+
+   c === 'container2'
+   ? setC('container2 container2-active')
+   : setC('container2')
+
+   head === 'head'
+   ? setHead('head head-active')
+   : setHead('head')
    
   }
   
@@ -114,15 +183,15 @@ function Part2() {
  
     return ( 
         <>
-        <div className= 'container2'>
-            <h1 className="head">Waterfall Trip Ideas</h1>
-            <div className="img-cont">
-            <figure className= {cont}>
+        <div className= {c}>
+            <h1 className={head}>Waterfall Trip Destinations</h1>
+            <div className={display1}>
+            <figure className= {cont}  ref= {inner} style={{opacity:offsetY /(line.top + offsetHeight)}}>
                 <img className= {expand} src ={angel} alt="" />
                 <figcaption className={ex}>
                 <h3 className="feat">Feautured Destination</h3>
                 <h1 className="heading">Angel Falls</h1>
-                <div className="line"></div>
+                <div className="line" ref={inner} style ={{width:`${offsetY / (line.top + offsetHeight)* 7}%`}}></div>
                   <p className={text}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
                 Magni iusto dolores maiores ipsa blanditiis quam deserunt voluptatum officia corporis, 
                 omnis distinctio facilis illo a explicabo eos, ad, rem sequi eveniet consequuntur
@@ -132,12 +201,12 @@ function Part2() {
                 </figcaption>
                 </figure>
                  
-                 <figure className={cont1}>
+                 <figure className={cont1} ref= {inner} style={{opacity:offsetY /(line.top + offsetHeight)}}>
                  <img className={expand1} src={jog} alt='' />
                 <figcaption className= {ex1}>
                 <h3 className="feat">Feautured Destination</h3>
                 <h1 className="heading">Jog Falls</h1>
-                <div className="line"></div>
+                <div className="line"ref={inner} style ={{width:`${offsetY / (line.top + offsetHeight)* 7}%`}}></div>
                 <p className={text1}>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                  Aut temporibus, nisi assumenda quod libero incidunt?
                   Doloribus asperiores praesentium inventore, pariatur
@@ -152,12 +221,12 @@ function Part2() {
                 </div>
 
                 <div className={display}>
-            <figure className={cont2}>
+            <figure className={cont2}  ref= {inner} style={{opacity:offsetY /(line.top + offsetHeight)}}>
             <img  className={expand2} src={victoria} alt="" />
                 <figcaption className={ex2}>
                 <h3 className="feat">Feautured Destination</h3>
                 <h1 className="heading">Victoria Falls</h1>
-                <div className="line"></div>
+                <div className="line" ref={inner} style ={{width:`${offsetY / (line.top + offsetHeight)* 7}%`}}></div>
                   <p className={text2}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
                 Magni iusto dolores maiores ipsa blanditiis quam deserunt voluptatum officia corporis, 
                 omnis distinctio facilis illo a explicabo eos, ad, rem sequi eveniet consequuntur
@@ -167,12 +236,12 @@ function Part2() {
                 </figcaption>
                 </figure>
                 
-                 <figure className={cont3}>
+                 <figure className={cont3} ref= {inner} style={{opacity:offsetY /(line.top + offsetHeight)}}>
                  <img className={expand3} id='niagra' src={niagra} alt='' />
                 <figcaption className={ex3}>
                 <h3 className="feat">Feautured Destination</h3>
                 <h1 className="heading">Niagara Falls</h1>
-                <div className="line"></div>
+                <div className="line" ref={inner} style ={{width:`${offsetY / (line.top + offsetHeight)* 7}%`}}></div>
                 <p className={text3}>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                  Aut temporibus, nisi assumenda quod libero incidunt?
                   Doloribus asperiores praesentium inventore, pariatur
