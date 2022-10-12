@@ -36,6 +36,7 @@ function Part2() {
   const[display, setDisplay] = useState('img-cont1')
   const[c, setC] = useState('container2')
   const[head, setHead] = useState('head')
+  const[texts, setTexts] = useState('texts')
 
   const toggleHandler = () => {
     expand === 'img1'
@@ -66,11 +67,18 @@ function Part2() {
    ? setHead('head head-active')
    : setHead('head')
 
+   texts=== 'texts'
+   ? setTexts('texts texts-active')
+   : setTexts('texts');
+
+
   }
   const[expand1, setExpand1] = useState('img2');
   const[ex1, setEx1] = useState('fig2');
   const[text1, setText1]= useState('text')
   const[cont1, setCont1]= useState('cont2')
+  
+
   
   
 
@@ -102,6 +110,10 @@ function Part2() {
    head === 'head'
    ? setHead('head head-active')
    : setHead('head')
+
+   texts=== 'texts'
+   ? setTexts('texts texts-active')
+   : setTexts('texts');
 
   }
   
@@ -140,6 +152,10 @@ function Part2() {
    head === 'head'
    ? setHead('head head-active')
    : setHead('head')
+
+   texts=== 'texts'
+   ? setTexts('texts texts-active')
+   : setTexts('texts');
    
   }
   const[expand3, setExpand3] = useState('img4');
@@ -176,6 +192,10 @@ function Part2() {
    head === 'head'
    ? setHead('head head-active')
    : setHead('head')
+
+   texts=== 'texts'
+   ? setTexts('texts texts-active')
+   : setTexts('texts');
    
   }
   
@@ -196,7 +216,19 @@ function Part2() {
                 Magni iusto dolores maiores ipsa blanditiis quam deserunt voluptatum officia corporis, 
                 omnis distinctio facilis illo a explicabo eos, ad, rem sequi eveniet consequuntur
                  necessitatibus similique quas sit vitae veniam. Molestias beatae aliquam nam eos nihil,
-                 illo laudantium rem temporibus quis reiciendis tempore!<br/>
+                 illo laudantium rem temporibus quis reiciendis tempore!<br/><br/>
+                 <p className={texts}>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                 Dolore dolor numquam facere dignissimos optio deleniti consectetur 
+                 facilis commodi sit maiores tempora obcaecati accusantium animi nostrum at quisquam sunt,
+                  maxime incidunt! Voluptatem, minus. Rerum optio labore necessitatibus quaerat exercitationem<br/><br/>
+                   Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                   Quo nisi harum voluptatem facere ut ad veritatis deleniti et,
+                    ipsa enim voluptates pariatur blanditiis! Rerum ad quibusdam fuga ab! Tempora,
+                     expedita minus? Voluptates ullam laborum soluta asperiores reprehenderit, laboriosam tempora hic.
+                      Quasi at nihil qui hic officiis necessitatibus doloribus, dolorem magnam.<br/><br/>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                       Cumque voluptatibus commodi porro aut, pariatur ipsum rerum incidunt soluta!
+                       Assumenda hic dolorum voluptates similique iste facilis aspernatur unde maxime eaque porro?</p><br/>
                  <button className="btn" onClick={toggleHandler}>Discover Destination <span><BiRightArrowAlt/></span></button></p>
                 </figcaption>
                 </figure>
@@ -213,7 +245,19 @@ function Part2() {
                    illo ea magni tenetur suscipit rerum quod soluta.
                     Maiores rerum id iste aliquid? Praesentium,
                     impedit. Obcaecati ducimus numquam dolorem magnam ea iste error, 
-                neque vel, ut quaerat possimus voluptatem hic.<br/>
+                neque vel, ut quaerat possimus voluptatem hic.<br/><br/>
+                <p className={texts}>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                 Dolore dolor numquam facere dignissimos optio deleniti consectetur 
+                 facilis commodi sit maiores tempora obcaecati accusantium animi nostrum at quisquam sunt,
+                  maxime incidunt! Voluptatem, minus. Rerum optio labore necessitatibus quaerat exercitationem<br/><br/>
+                   Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                   Quo nisi harum voluptatem facere ut ad veritatis deleniti et,
+                    ipsa enim voluptates pariatur blanditiis! Rerum ad quibusdam fuga ab! Tempora,
+                     expedita minus? Voluptates ullam laborum soluta asperiores reprehenderit, laboriosam tempora hic.
+                      Quasi at nihil qui hic officiis necessitatibus doloribus, dolorem magnam.<br/><br/>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                       Cumque voluptatibus commodi porro aut, pariatur ipsum rerum incidunt soluta!
+                       Assumenda hic dolorum voluptates similique iste facilis aspernatur unde maxime eaque porro?</p><br/>
                 <button className="btn" onClick={toggleHandler2}>Discover Destination <span><BiRightArrowAlt/></span></button></p>
                 </figcaption>
                 </figure>
@@ -231,7 +275,19 @@ function Part2() {
                 Magni iusto dolores maiores ipsa blanditiis quam deserunt voluptatum officia corporis, 
                 omnis distinctio facilis illo a explicabo eos, ad, rem sequi eveniet consequuntur
                  necessitatibus similique quas sit vitae veniam. Molestias beatae aliquam nam eos nihil,
-                 illo laudantium rem temporibus quis reiciendis tempore!<br/>
+                 illo laudantium rem temporibus quis reiciendis tempore!<br/><br/>
+                 <p className={texts}>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                 Dolore dolor numquam facere dignissimos optio deleniti consectetur 
+                 facilis commodi sit maiores tempora obcaecati accusantium animi nostrum at quisquam sunt,
+                  maxime incidunt! Voluptatem, minus. Rerum optio labore necessitatibus quaerat exercitationem<br/><br/>
+                   Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                   Quo nisi harum voluptatem facere ut ad veritatis deleniti et,
+                    ipsa enim voluptates pariatur blanditiis! Rerum ad quibusdam fuga ab! Tempora,
+                     expedita minus? Voluptates ullam laborum soluta asperiores reprehenderit, laboriosam tempora hic.
+                      Quasi at nihil qui hic officiis necessitatibus doloribus, dolorem magnam.<br/><br/>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                       Cumque voluptatibus commodi porro aut, pariatur ipsum rerum incidunt soluta!
+                       Assumenda hic dolorum voluptates similique iste facilis aspernatur unde maxime eaque porro?</p><br/>
                  <button className="btn" onClick={toggleHandler3}>Discover Destination <span><BiRightArrowAlt/></span></button></p>
                 </figcaption>
                 </figure>
@@ -248,7 +304,19 @@ function Part2() {
                    illo ea magni tenetur suscipit rerum quod soluta.
                     Maiores rerum id iste aliquid? Praesentium,
                     impedit. Obcaecati ducimus numquam dolorem magnam ea iste error, 
-                neque vel, ut quaerat possimus voluptatem hic.<br/>
+                neque vel, ut quaerat possimus voluptatem hic.<br/><br/>
+                <p className={texts}>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                 Dolore dolor numquam facere dignissimos optio deleniti consectetur 
+                 facilis commodi sit maiores tempora obcaecati accusantium animi nostrum at quisquam sunt,
+                  maxime incidunt! Voluptatem, minus. Rerum optio labore necessitatibus quaerat exercitationem<br/><br/>
+                   Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                   Quo nisi harum voluptatem facere ut ad veritatis deleniti et,
+                    ipsa enim voluptates pariatur blanditiis! Rerum ad quibusdam fuga ab! Tempora,
+                     expedita minus? Voluptates ullam laborum soluta asperiores reprehenderit, laboriosam tempora hic.
+                      Quasi at nihil qui hic officiis necessitatibus doloribus, dolorem magnam.<br/><br/>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                       Cumque voluptatibus commodi porro aut, pariatur ipsum rerum incidunt soluta!
+                       Assumenda hic dolorum voluptates similique iste facilis aspernatur unde maxime eaque porro?</p><br/>
                 <button className="btn" onClick={toggleHandler4}>Discover Destination <span><BiRightArrowAlt/></span></button></p>
                 </figcaption>
                 </figure>

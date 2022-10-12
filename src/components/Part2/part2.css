@@ -105,6 +105,18 @@
     text-align:left;
     font-weight: bolder;
 }
+.texts {
+    display: none;
+    margin-top: 20px;
+    transition: .5s ease-in;
+    font-family: pop;
+    font-size: 1em;
+    text-align:left;
+    font-weight: bolder;
+}
+.texts-active {
+    display: contents;
+}
 
 .text:hover {
     opacity: 1;
