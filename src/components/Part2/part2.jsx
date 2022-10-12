@@ -37,6 +37,7 @@ function Part2() {
   const[c, setC] = useState('container2')
   const[head, setHead] = useState('head')
   const[texts, setTexts] = useState('texts')
+  const[btnName, setBtnName] = useState('Read More')
 
   const toggleHandler = () => {
     expand === 'img1'
@@ -71,6 +72,9 @@ function Part2() {
    ? setTexts('texts texts-active')
    : setTexts('texts');
 
+   btnName=== 'Read More'
+   ? setBtnName('Show Less')
+   : setBtnName('Read More')
 
   }
   const[expand1, setExpand1] = useState('img2');
@@ -115,6 +119,10 @@ function Part2() {
    ? setTexts('texts texts-active')
    : setTexts('texts');
 
+   btnName=== 'Read More'
+   ? setBtnName('Show Less')
+   : setBtnName('Read More')
+
   }
   
   const[expand2, setExpand2] = useState('img3');
@@ -156,6 +164,10 @@ function Part2() {
    texts=== 'texts'
    ? setTexts('texts texts-active')
    : setTexts('texts');
+
+   btnName=== 'Read More'
+   ? setBtnName('Show Less')
+   : setBtnName('Read More')
    
   }
   const[expand3, setExpand3] = useState('img4');
@@ -196,6 +208,10 @@ function Part2() {
    texts=== 'texts'
    ? setTexts('texts texts-active')
    : setTexts('texts');
+
+   btnName=== 'Read More'
+   ? setBtnName('Show Less')
+   : setBtnName('Read More')
    
   }
   
@@ -229,7 +245,7 @@ function Part2() {
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                        Cumque voluptatibus commodi porro aut, pariatur ipsum rerum incidunt soluta!
                        Assumenda hic dolorum voluptates similique iste facilis aspernatur unde maxime eaque porro?</p><br/>
-                 <button className="btn" onClick={toggleHandler}>Discover Destination <span><BiRightArrowAlt/></span></button></p>
+                 <button className="btn" onClick={toggleHandler}>{btnName}<span><BiRightArrowAlt/></span></button></p>
                 </figcaption>
                 </figure>
                  
@@ -258,7 +274,7 @@ function Part2() {
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                        Cumque voluptatibus commodi porro aut, pariatur ipsum rerum incidunt soluta!
                        Assumenda hic dolorum voluptates similique iste facilis aspernatur unde maxime eaque porro?</p><br/>
-                <button className="btn" onClick={toggleHandler2}>Discover Destination <span><BiRightArrowAlt/></span></button></p>
+                <button className="btn" onClick={toggleHandler2}>{btnName}<span><BiRightArrowAlt/></span></button></p>
                 </figcaption>
                 </figure>
 
@@ -288,7 +304,7 @@ function Part2() {
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                        Cumque voluptatibus commodi porro aut, pariatur ipsum rerum incidunt soluta!
                        Assumenda hic dolorum voluptates similique iste facilis aspernatur unde maxime eaque porro?</p><br/>
-                 <button className="btn" onClick={toggleHandler3}>Discover Destination <span><BiRightArrowAlt/></span></button></p>
+                 <button className="btn" onClick={toggleHandler3}>{btnName}<span><BiRightArrowAlt/></span></button></p>
                 </figcaption>
                 </figure>
                 
@@ -317,7 +333,7 @@ function Part2() {
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                        Cumque voluptatibus commodi porro aut, pariatur ipsum rerum incidunt soluta!
                        Assumenda hic dolorum voluptates similique iste facilis aspernatur unde maxime eaque porro?</p><br/>
-                <button className="btn" onClick={toggleHandler4}>Discover Destination <span><BiRightArrowAlt/></span></button></p>
+                <button className="btn" onClick={toggleHandler4}>{btnName}<span><BiRightArrowAlt/></span></button></p>
                 </figcaption>
                 </figure>
 
