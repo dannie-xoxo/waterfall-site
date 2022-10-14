@@ -219,7 +219,7 @@ function Part2() {
  
     return ( 
         <>
-        <div className= {c}>
+        <div className= {c} id= 'container2'>
             <h1 className={head}>Waterfall Trip Destinations</h1>
             <div className={display1}>
             <figure className= {cont}>

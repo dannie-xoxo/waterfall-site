@@ -55,6 +55,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin: 0
 }
 
 li {
@@ -73,6 +74,7 @@ a {
     letter-spacing: 2px;
 }
 
+
 a.active {
     text-decoration: underline 3px solid var(--dark);
 }
@@ -86,12 +88,10 @@ a.active {
     letter-spacing: 5px;
     color: var(--dark);
     font-family: pop;
-    font-size: 1.1em;
+    font-size: 1em;
     font-weight: bolder;
 }
-.header span {
-    height: 30px;
-}
+
 .border {
         position: absolute;
         width: 100%;
@@ -118,3 +118,67 @@ svg{
     margin-top: 5px;
     margin-right: 4px;
 }
+.toggler div {
+    width: 2.2em;
+    height: .2em;
+    margin: .3em;
+    background: var(--dark);
+    transition: 0.4s ease-in;
+ } 
+ 
+ .toggler {
+    margin-top: 0px;
+    display: none;
+    cursor: pointer;
+ }
+ 
+ @media screen and (max-width: 768px) {
+    .toggler {
+       display: block;
+   }
+   
+   .mainNav {
+       position:fixed;
+       top: 10vh;
+       right: 0;
+       width: 40vw;
+       height: 50vw;
+       background:#fff;
+       flex-direction:column;
+       transform: translateX(120%);
+       transition: 0.5s ease-in; 
+       margin: 5px 0;
+       padding: 10px;
+       border-radius: 20px 0 0 20px;
+  }
+  .big-header {
+    font-size: 7em;
+  }
+.mount1 {
+    width: 0;
+}
+.sky {
+    width: 0;
+}
+
+   
+}
+ 
+  /* Nav Active Class */
+  .nav-active {
+    transform: translateX(0);
+    position: absolute;   
+    
+ }
+ 
+ /* Hamburger Icon Animation */
+ .toggle .line1 {
+    transform: rotate(-45deg) translate(-7px, 5px);
+ }
+ .toggle .line2 {
+    opacity: 0;
+ }
+ .toggle .line3 {
+    transform: rotate(45deg) translate(-7px, -5px);
+ }
+ 

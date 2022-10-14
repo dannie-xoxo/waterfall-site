@@ -5,6 +5,19 @@ import mount1 from '../images/img5.png';
 import mount2 from '../images/img6.png';
 function Part1() {
 
+    const[active, setActive]= useState('mainNav');
+    const[toggleIcon, setToggleIcon] = useState('toggler');
+
+    const toggle =() => {
+        active=== 'mainNav'
+        ? setActive('mainNav nav-active')
+        : setActive('mainNav')
+
+        toggleIcon==='toggler'
+        ? setToggleIcon ('toggler toggle')
+        : setToggleIcon('toggler');
+    }
+
     const inner= useRef()
  
     const[offsetY, setOffsetY] = useState(0);
@@ -32,13 +45,18 @@ function Part1() {
             <nav className='keyNav'>
             <h1 className='header'> Globe Express</h1>
             <div className="border"></div>
-                <ul className= 'mainNav'>
+                <ul className= {active}>
                 <li className='navItem'><a className='active' href="#Home" >Home</a></li>
                 <li className='navItem'><a href="#places" className='navLink'>Places</a></li>
-                <li className='navItem'><a href="#destinations" className='navLink'>Destinations</a></li>
+                <li className='navItem'><a href="#container2" className='navLink'>Destinations</a></li>
                 <li className='navItem'><a href="#offers" className='navLink'>Offers</a></li>
                 <li className='navItem'><a href="#contact" className='navLink'>Contact Us</a></li>
                 </ul>
+                <div onClick={toggle} className={toggleIcon}>
+                <div className="line1"></div>
+                <div className="line2"></div>
+                <div className="line3"></div>
+            </div>
             </nav>
             <h1 className='big-header' ref={inner} style={{transform: `translateY(${offsetY * 0.5}px)`,
              opacity: offsetHeight /( headerY.top + offsetY)}}>falls</h1>
